@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Open Estudio</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+
+        <!-- Lottie -->
+        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+
+        <!-- Hojas de estilos -->
+        <link rel="stylesheet" href="../web/styles/basic.css">
+        <link rel="stylesheet" href="../web/styles/home.css">
+
+
+        <!-- Controladores -->
+        <script src="../web/controllers/account.js"></script>
+        <script src="../web/controllers/search.js"></script>
+
+
+        <!-- Hojas de Estilos Adicionales -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <main>
+
+        <header>
+            <nav id="navbar" class="navbar navbar-expand-sm">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="home">
+                        <span id="logo">
+                            OPEN STUDIO
+                        </span>
+					</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarRight">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+                    <div class="collapse navbar-collapse" id="navbarRight">
+                        <ul class="navbar-nav ms-auto d-flex" id="navbarRightSide">
+                            <li class="nav-item">
+                                <a id="info-btn" class="nav-link" href="art_collection" role="button">
+                                    <span id="line">Buy</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a id="info-btn" class="nav-link" href="upload" role="button">
+                                    <span id="line">Sell</span>
+                                </a>
+                            </li>
+                                <li class="nav-item">
+                                    <a id="user-btn" class="nav-link" href="#" role="button" data-bs-toggle="modal" data-bs-target="#modalId">
+                                        <span id="line">Login</span>
+                                    </a>
+                                </li>
+                            <li class="nav-item">
+                                <a id="cart-btn" class="nav-link" href="cart" role="button">
+                                    <span id="line">Cart</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+				</div>
+			</nav> 
+            <div id="alertPlaceholder"></div>
+        </header>
+            <div class="hero">
+                <div class="row">
+                    <div class="col-md-6">  
+                        <form class="d-flex" action="/search_collection" method="GET">
+                            <input class="form-control me-2 custom-search" type="search" placeholder="Search..." aria-label="Search" name="title" id="searchInput">
+                            <button type="submit" class="btn btn-primary">Search</button>
+                        </form>                                            
+                    </div>
+                    <div class="col-md-6 title">
+                        <h2>Discover, buy or sell your new favorite artwork.</h2>
+                        <a href="about_us"><h3>About Us</h3></a>
+                    </div>
+                </div>
+            </div>
+
+            <section class="featured-section">
+                <div class="container">
+                    <h3 class="featured-title">Featured</h3>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 mb-4">
+                        <a href="art_collection">
+                            <div class="card featured1">
+                                <h2> Fantastical Landscapes</h2>
+                            </div>
+                        </a>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                        <a href="art_collection">
+                            <div class="card featured2">
+                                <h2> Monochromatic Figuration </h2>
+                            </div>
+                        </a>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                        <a href="art_collection">
+                            <div class="card featured3">
+                                <h2> Contemporary Cubism </h2>
+                            </div>
+                        </a>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                        <a href="art_collection">
+                            <div class="card featured4">
+                                <h2> Monochromatic Figuration </h2>
+                            </div>
+                        </a>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                        <a href="art_collection">
+                            <div class="card featured5">
+                                <h2> Natural Abstracticion </h2>
+                            </div>
+                        </a>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                        <a href="art_collection">
+                            <div class="card featured6">
+                                <h2> Contemporary Impressionism </h2>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="curators-picks">
+                <div class="container">
+                  <h3 class="section-title">Curators Picks</h3>
+                  <!-- Swiper -->
+                  <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide">
+                        <a href="product">
+                        <div class="card curated1"></div>
+                        </a>
+                      </div>
+                      <div class="swiper-slide">
+                        <a href="product">
+                        <div class="card curated2"></div>
+                        </a>
+                      </div>
+                      <div class="swiper-slide">
+                        <a href="product">
+                        <div class="card curated3"></div>
+                        </a>
+                      </div>
+                      <div class="swiper-slide">
+                        <a href="product">
+                        <div class="card curated4"></div>
+                        </a>
+                      </div>
+                      <div class="swiper-slide">
+                        <a href="product">
+                        <div class="card curated5"></div>
+                        </a>
+                      </div>
+                      <!-- Additional slides -->
+                    </div>
+                    <!-- Swiper Scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                  </div>
+                </div>
+              </section>
+    
+
+              <section class="contact-section">
+                <div class="container text-center">
+                <div class="contact-section-text">
+                  <h2>Contact Our Team</h2>
+                  <p class="contact-message"><a href="mailto:openstudio@gmail.com">Get in Touch.</a></p>
+                </div>
+                  <div class="row">
+                    <div class="col d-flex justify-content-between footer">
+                      <span>© Open Studio 2024</span>
+                      <div>
+                        <a href="about_us">About Us</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              
+              <!--Login Modal-->
+            <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="Login" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+                    <div class="modal-content">
+                        <div id="lottie-animation-login" style="display:none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50%; max-width: 300px; height: 50%; max-height: 600px; background-color: white; border-radius: 20px; z-index: 1050; overflow: hidden;">
+                            <iframe src="https://lottie.host/embed/d920ba6d-ca64-4543-80a1-2d3d29bb7701/Hny73MkuAM.json" width="100%" height="100%" style="border:none;"></iframe>
+                        </div>                        
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="Login">Log in</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <form id="loginForm" action="/login" method="post">
+                            <div class="modal-body">   
+                                <label for="input_user">Email</label>
+                                <div class="input-group mb-3" style="margin-top: 5px;">
+                                    <input type="email" id="input_user" name="email" required class="form-control">
+                                </div>
+
+                                <label for="input_password">Password</label>
+                                <div class="input-group mb-3" style="margin-top: 5px;">
+                                    <input type="password" id="input_password" name="password" required class="form-control">
+                                </div>
+
+                                <div style="text-align: center;">
+                                    <button type="submit" class="btn btn-primary">Login</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="modal-footer d-flex justify-content-center align-items-center">
+                            <div class="text-center">
+                                <span>Don't have an account?</span><br>
+                                <button type="button" class="btn btn-primary btn-signup" data-bs-toggle="modal" data-bs-target="#Register">Sign Up</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Sign Up Modal -->
+            <div class="modal fade" id="Register" tabindex="-1" aria-labelledby="RegisterLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm">
+                    <div class="modal-content">
+                        <div id="lottie-animation-signup" style="display:none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50%; max-width: 300px; height: 50%; max-height: 600px; background-color: white; border-radius: 20px; z-index: 1050; overflow: hidden;">
+                            <iframe src="https://lottie.host/embed/d920ba6d-ca64-4543-80a1-2d3d29bb7701/Hny73MkuAM.json" width="100%" height="100%" style="border:none;"></iframe>
+                        </div>
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="RegisterLabel">Sign Up</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <form id="signupForm" action="/signup" method="post">
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label for="registerName" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="registerName" name="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="registerEmail" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="registerEmail" name="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="registerPassword" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="registerPassword" name="password" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="registerConfirmPassword" class="form-label">Confirm Password</label>
+                                    <input type="password" class="form-control" id="registerConfirmPassword" name="confirmPassword" required>
+                                </div>
+                                <div class="button-container" style="text-align: center;">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
+                        </form>                        
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- Swiper's JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+        <script>
+            var swiper = new Swiper('.mySwiper', {
+              slidesPerView: 3,
+              spaceBetween: 30,
+              slidesPerGroup: 3,
+              loop: true,
+              loopFillGroupWithBlank: true,
+              pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+              },
+              scrollbar: {
+                el: '.swiper-scrollbar',
+                draggable: true,
+              },
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+            });
+          </script>
+      
+    </body>
+</html>
