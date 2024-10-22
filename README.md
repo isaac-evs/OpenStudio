@@ -1,5 +1,5 @@
 # OpenStudio
-Full Stack Web app Demo for VIVE ITESO
+Full Stack Web app 
 
 ## Getting Started
 
