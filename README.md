@@ -15,8 +15,8 @@ Make sure you have the following installed:
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/EurekaITESO/OpenStudio.git
-   cd OpenStudio
+      git clone https://github.com/isaac-evs/OpenStudio.git
+      cd OpenStudio
    ```
 
 2. **Install dependencies:**
